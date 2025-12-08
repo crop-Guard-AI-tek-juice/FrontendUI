@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import Background from "../assets/Background_1.jpg";
 import CropIcon from "../assets/Logo.png";
-import GoogleIcon from "../assets/googleicon.png";
+import GIcon from "../assets/icon.png";
 
 import { auth, googleProvider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
@@ -56,7 +56,7 @@ const Login: React.FC<LoginProps> = ({ setUser }) => {
           <p>Login with your Google account to monitor crop health</p>
 
           <button className="google-login-btn" onClick={handleGoogleLogin}>
-            <img src={GoogleIcon} alt="Google logo" />
+            <img src={GIcon} alt="Google logo" />
             Login with Google
           </button>
         </div>
