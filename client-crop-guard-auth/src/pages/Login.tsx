@@ -2,7 +2,7 @@ import React from "react";
 import "./Login.css";
 import Background from "../assets/Background_1.jpg";
 import CropIcon from "../assets/Logo.png";
-import GoogleIcon from "../assets/googleIcon.png";
+import GoogleIcon from "../assets/googleicon.png";
 
 import { auth, googleProvider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
