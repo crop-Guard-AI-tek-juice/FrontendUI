@@ -1,0 +1,106 @@
+/* Container covers full viewport with background image */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.login-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  padding: 30px;
+}
+
+/* Crop Guard AI Icon at top of card */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.crop-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Heading */
+.login-content h2 {
+  margin-bottom: 12px;
+  color: #2e7d32; /* dark green */
+  font-size: 24px;
+}
+
+/* Paragraph */
+.login-content p {
+  margin-bottom: 24px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Google login button */
+.google-login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.google-login-btn img {
+  width: 28px;
+  margin-right: 12px;
+}
+
+.google-login-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-card {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .crop-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .login-content h2 {
+    font-size: 20px;
+  }
+
+  .login-content p {
+    font-size: 14px;
+  }
+
+  .google-login-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  .google-login-btn img {
+    width: 24px;
+    margin-right: 10px;
+  }
+}
