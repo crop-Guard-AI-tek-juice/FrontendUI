@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dashboard.css";
+import "./dashboard.css";
 import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
