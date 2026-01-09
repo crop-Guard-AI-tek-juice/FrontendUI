@@ -33,7 +33,6 @@ const Login: React.FC<LoginProps> = ({ setUser }) => {
           photoURL: user.photoURL,
         });
 
-        // Navigate to dashboard after login
         navigate("/dashboard");
       }
     } catch (error) {
