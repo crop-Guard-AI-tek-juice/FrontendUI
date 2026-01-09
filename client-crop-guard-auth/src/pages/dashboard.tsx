@@ -50,7 +50,12 @@ const Dashboard: React.FC<DashboardProps> = ({ user, setUser }) => {
 
       <div className="crop-grid">
         {crops.map((crop) => (
-          <div key={crop.name} className="crop-card">
+          <div
+            key={crop.name}
+            className="crop-card"
+            onClick={() => crop.name === "Cassava" && navigate("/cassava")}
+            style={{ cursor: "pointer" }}
+          >
             <img src={crop.img} alt={crop.name} className="crop-img" />
             <h3>{crop.name}</h3>
           </div>

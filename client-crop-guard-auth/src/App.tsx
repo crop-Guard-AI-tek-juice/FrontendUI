@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/dashboard";
+import CassavaPage  from "./pages/CassavaPage";
 
 interface User {
   displayName: string;
@@ -13,9 +14,7 @@ function App() {
 
   return (
     <Routes>
-      <Route
-        path="/"
-        element={<Login setUser={setUser} />}
+      <Route path="/" element={<Login setUser={setUser} />}
       />
       <Route
         path="/dashboard"
@@ -23,6 +22,7 @@ function App() {
           user ? <Dashboard user={user} setUser={setUser} /> : <Login setUser={setUser} />
         }
       />
+      <Route path="/cassava" element={<CassavaPage />} />
     </Routes>
   );
 }
