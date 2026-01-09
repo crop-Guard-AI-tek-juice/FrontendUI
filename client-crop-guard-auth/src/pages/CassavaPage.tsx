@@ -28,7 +28,8 @@ const CassavaPage: React.FC = () => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/api/predict/",
+        // "http://127.0.0.1:8000/api/predict/",
+        "https://backend-1-uzka.onrender.com/api/predict/"
         {
           method: "POST",
           body: formData,
