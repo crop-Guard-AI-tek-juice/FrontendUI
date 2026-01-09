@@ -3,13 +3,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100vw;
+  min-height: 100vh;
   min-height: 100svh;
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 20px;
-  min-height: 100vh;
+
+  padding: 0;
 }
+
 
 .login-card {
   position: relative;
