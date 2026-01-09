@@ -1,10 +1,11 @@
 .dashboard-container {
-  min-height: 100vh;
+  min-height: 100svh;
   background: #f4faf4;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 95vw;
 }
 
 .dashboard-header {
