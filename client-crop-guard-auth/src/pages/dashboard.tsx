@@ -33,7 +33,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, setUser }) => {
   };
 
   const crops = [
-    { name: "Cassava", img: "https://images.unsplash.com/photo-1598514982205-fb6b8f9c6c2d?auto=format&fit=crop&w=800&q=80" },
+    { name: "Cassava", img: "https://images.unsplash.com/photo-5EHB4RF9oTg?auto=format&fit=crop&w=800&q=80" },
     { name: "Millet", img: "https://images.unsplash.com/photo-1602526216437-31e1d39fe284?auto=format&fit=crop&w=800&q=80" },
     { name: "Passion Fruit", img: "https://images.unsplash.com/photo-1504114133367-631ecd3db3ca" },
   ];
