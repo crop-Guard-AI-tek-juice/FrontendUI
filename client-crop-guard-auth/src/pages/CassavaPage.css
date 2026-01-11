@@ -1,0 +1,137 @@
+/* CassavaPage.css */
+
+/* Container */
+.cassava-container {
+  padding: 20px;
+  max-width: 420px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Back button */
+.cassava-container button.back-btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #6aa84f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cassava-container button.back-btn:hover {
+  background-color: #5a9240;
+}
+
+/* Headings */
+.cassava-container h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cassava-container h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cassava-container h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #2e7d32;
+}
+
+/* Image preview */
+.cassava-container img.preview {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* File input */
+.cassava-container input[type="file"] {
+  width: 100%;
+  padding: 8px 0;
+  margin-top: 10px;
+}
+
+/* Buttons */
+.cassava-container button.action-btn {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e7d32;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cassava-container button.action-btn:hover {
+  background-color: #27632a;
+}
+
+.cassava-container button.action-btn:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Chat Box */
+.cassava-container .chat-box {
+  background: #f4f9f4;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Chat Messages */
+.cassava-container .chat-box p {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.cassava-container .chat-box p.user-msg {
+  background-color: #dcedc8;
+  text-align: right;
+}
+
+.cassava-container .chat-box p.ai-msg {
+  background-color: #ffffff;
+  text-align: left;
+}
+
+/* Chat input */
+.cassava-container input.chat-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .cassava-container {
+    padding: 15px;
+  }
+
+  .cassava-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .cassava-container button.back-btn,
+  .cassava-container button.action-btn {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}

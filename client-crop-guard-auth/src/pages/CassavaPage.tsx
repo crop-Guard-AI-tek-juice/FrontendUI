@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./CassavaPage.css";
 
 interface Message {
   role: "user" | "ai";
@@ -107,77 +108,59 @@ const CassavaPage: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "420px", margin: "auto" }}>
-      <button onClick={() => navigate(-1)}>Back</button>
+    <div className="cassava-container">
+  <button className="back-btn" onClick={() => navigate(-1)}>Back</button>
 
-      <h2>Cassava Leaf Disease Detection</h2>
+  <h2>Cassava Leaf Disease Detection</h2>
 
-      <input type="file" accept="image/*" onChange={handleImageChange} />
+  <input type="file" accept="image/*" onChange={handleImageChange} />
 
-      {preview && (
-        <img
-          src={preview}
-          alt="preview"
-          style={{ width: "100%", marginTop: "15px", borderRadius: "8px" }}
-        />
-      )}
+  {preview && <img src={preview} alt="preview" className="preview" />}
+
+  <button
+    onClick={handleDetect}
+    disabled={!image || loading}
+    className="action-btn"
+  >
+    {loading ? "Detecting..." : "Detect Disease"}
+  </button>
+
+  {prediction && <h3>Detected Disease: {prediction}</h3>}
+
+  {prediction && (
+    <div className="chat-section">
+      <h4>Ask Crop Guard AI</h4>
+
+      <div className="chat-box">
+        {messages.map((msg, idx) => (
+          <p
+            key={idx}
+            className={msg.role === "user" ? "user-msg" : "ai-msg"}
+          >
+            <strong>{msg.role === "user" ? "You" : "AI"}:</strong> {msg.text}
+          </p>
+        ))}
+        {chatLoading && <p><em>AI is typing…</em></p>}
+      </div>
+
+      <input
+        type="text"
+        placeholder="Ask a question about this disease…"
+        value={question}
+        onChange={(e) => setQuestion(e.target.value)}
+        className="chat-input"
+      />
 
       <button
-        onClick={handleDetect}
-        disabled={!image || loading}
-        style={{ marginTop: "15px", width: "100%" }}
+        onClick={askQuestion}
+        disabled={chatLoading}
+        className="action-btn"
       >
-        {loading ? "Detecting..." : "Detect Disease"}
+        Ask
       </button>
-
-      {prediction && (
-        <h3 style={{ marginTop: "15px" }}>
-          Detected Disease: {prediction}
-        </h3>
-      )}
-
-      {/* Chat Section */}
-      {prediction && (
-        <div style={{ marginTop: "20px" }}>
-          <h4>Ask Crop Guard AI</h4>
-
-          <div
-            style={{
-              background: "#f4f9f4",
-              padding: "10px",
-              borderRadius: "8px",
-              maxHeight: "300px",
-              overflowY: "auto",
-              marginBottom: "10px",
-            }}
-          >
-            {messages.map((msg, idx) => (
-              <p key={idx}>
-                <strong>{msg.role === "user" ? "You" : "AI"}:</strong>{" "}
-                {msg.text}
-              </p>
-            ))}
-            {chatLoading && <p><em>AI is typing…</em></p>}
-          </div>
-
-          <input
-            type="text"
-            placeholder="Ask a question about this disease…"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            style={{ width: "100%", padding: "8px" }}
-          />
-
-          <button
-            onClick={askQuestion}
-            disabled={chatLoading}
-            style={{ marginTop: "10px", width: "100%" }}
-          >
-            Ask
-          </button>
-        </div>
-      )}
     </div>
+  )}
+</div>
   );
 };
 
