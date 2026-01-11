@@ -36,8 +36,8 @@ const Dashboard: React.FC<DashboardProps> = ({ user, setUser }) => {
   };
 
   const crops = [
-    { name: "Cassava", img: "cassavaImg" },
-    { name: "Millet", img: "milletImg" },
+    { name: "Cassava", img: cassavaImg },
+    { name: "Millet", img: milletImg },
     { name: "Passion Fruit", img: "https://images.unsplash.com/photo-1504114133367-631ecd3db3ca" },
   ];
 
