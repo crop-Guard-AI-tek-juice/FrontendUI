@@ -4,6 +4,9 @@ import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+import cassavaImg from "../assets/cassa.jpg";
+import milletImg from "../assets/mill.jpg";
+
 interface User {
   displayName: string;
   photoURL: string;
@@ -33,8 +36,8 @@ const Dashboard: React.FC<DashboardProps> = ({ user, setUser }) => {
   };
 
   const crops = [
-    { name: "Cassava", img: "https://images.unsplash.com/photo-5EHB4RF9oTg" },
-    { name: "Millet", img: "https://images.unsplash.com/photo-1602526216437-31e1d39fe284?auto=format&fit=crop&w=800&q=80" },
+    { name: "Cassava", img: "cassavaImg" },
+    { name: "Millet", img: "milletImg" },
     { name: "Passion Fruit", img: "https://images.unsplash.com/photo-1504114133367-631ecd3db3ca" },
   ];
 
